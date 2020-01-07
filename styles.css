@@ -1,0 +1,60 @@
+#marketplacecomponent .items .item .marketDetails{
+	width:160px;
+}
+#marketplacecomponent .items .item .marketDetails.bad .taux{
+	color:red;
+}
+#marketplacecomponent .items .item .marketDetails.good .taux{
+	color:green;
+}
+
+#marketplacecomponent .marketHeaderDetails{
+  width:145px;
+  display:flex;
+  align-items: center;
+}
+#marketplacecomponent .items .item .marketDetails p.taux {
+	width:100%;
+	display:flex;
+}
+#marketplacecomponent .items .item .marketDetails p.taux span{
+	margin-left:auto;
+}
+
+.marketplace .item {
+    height: 95px;
+}
+#iconEdit{
+  height:16px;
+  background-color:white;
+  padding:2px;
+  margin-left:auto;
+}
+#iconEdit:hover{
+  background-color:#6f9fc8;
+}
+.detailsTable{
+	font-size:0.8em;
+	width:100%;
+}
+.detailsTable th {
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 1px solid #6f9fc8;
+  padding: 2px;
+}
+.detailsTable th div {
+  display: flex;
+}
+.detailsTable th .usm {
+  margin-left: auto;
+}
+.detailsTable .metal,
+.detailsTable .cristal,
+.detailsTable .deut {
+  padding: 2px;
+}
+.detailsTable .value {
+  font-style: bold;
+  margin-left: auto;
+}
