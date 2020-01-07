@@ -1,2 +1,1 @@
-# ogamemarketgui
 # Ogame-Market-GUI
