@@ -166,7 +166,67 @@ function initSuperMarket(){
 		//on affiche le taux
 		if(ressArray.includes(itemTypeStr)){
 			let taux = (itemPriceStr / wantedPriceStr).toFixed(2);
-			infoBoxDiv.innerHTML = '<h3>taux</h3><p class="taux">   1 ' + wantedTypeStr + ' =' + taux + ' ' + itemTypeStr + '</p>';
+			var newH3 = document.createElement('h3');
+			newH3.textContent = "taux";
+			infoBoxDiv.appendChild(newH3);
+
+			var newP = document.createElement('p');
+			newP.classList.add("taux");
+			if (taux >= 1) {
+				newP.textContent = taux + ' ' + itemTypeStr + ' = 1 ' + wantedTypeStr;
+				if (itemTypeStr === "Métal")
+					if (wantedTypeStr === "Cristal")
+						if (taux < 1.8)
+							newP.classList.add("red");
+						else if (taux == 1.8)
+							newP.classList.add("orange");
+						else if (taux > 1.8)						
+							newP.classList.add("green");
+					else if (wantedTypeStr === "Deutérium")
+						if (taux < 2)
+							newP.classList.add("red");
+						else if (taux == 2)
+							newP.classList.add("orange");
+						else if (taux > 2)						
+							newP.classList.add("green");
+				if (itemTypeStr === "Cristal")
+					if (wantedTypeStr === "Deutérium")
+						if (taux < 1.5)
+							newP.classList.add("red");
+						else if (taux == 1.5)
+							newP.classList.add("orange");
+						else if (taux > 1.5)						
+							newP.classList.add("green");
+			}
+			else {
+				taux = (wantedPriceStr / itemPriceStr).toFixed(2);
+				newP.textContent = '1 ' + itemTypeStr + ' = ' + taux + wantedTypeStr;
+				if (itemTypeStr === "Deutérium")
+					if (wantedTypeStr === "Métal")
+						if (taux > 2)
+							newP.classList.add("red");
+						else if (taux == 2)
+							newP.classList.add("orange");
+						else if (taux < 2)						
+							newP.classList.add("green");
+					else if (wantedTypeStr === "Cristal")
+						if (taux > 1.5)
+							newP.classList.add("red");
+						else if (taux == 1.5)
+							newP.classList.add("orange");
+						else if (taux < 1.5)						
+							newP.classList.add("green");
+				if (itemTypeStr === "Cristal")
+					if (wantedTypeStr === "Métal")
+						if (taux > 1.8)
+							newP.classList.add("red");
+						else if (taux == 1.8)
+							newP.classList.add("orange");
+						else if (taux < 1.8)						
+							newP.classList.add("green");
+			}
+
+			infoBoxDiv.appendChild(newP);
 		}
 		if(shipArray.includes(itemTypeStr)){
 			let currentMetal = '50000';

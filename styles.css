@@ -58,3 +58,14 @@
   font-style: bold;
   margin-left: auto;
 }
+
+/* COLORS */
+.red {
+  color: red;
+}
+.orange {
+  color: orange;
+}
+.green {
+  color: green;
+}
