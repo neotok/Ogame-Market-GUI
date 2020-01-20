@@ -1,6 +1,6 @@
 {
 	"name": "Super Programme Anti Arnaque",
-	"version": "1.0",
+	"version": "1.1",
 	"description": "Vérifier taux du marché sur ogame",
 	"permissions": [
 		"activeTab", 
@@ -18,7 +18,8 @@
 	"content_scripts": [{
 		"css": ["styles.css"],
 		"js": ["content.js"],
-		"matches": ["https://s161-fr.ogame.gameforge.com/game/index.php?page=ingame&component=marketplace*"]
+		"matches": ["https://s161-fr.ogame.gameforge.com/game/index.php?page=ingame&component=marketplace*"],
+		"run_at": "document_idle"
 	}],
 	"web_accessible_resources": ["images/edit.svg"],
 	"manifest_version": 2

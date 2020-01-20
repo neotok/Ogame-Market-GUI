@@ -1,0 +1,24 @@
+{
+  "name": "kaoscript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "content.js",
+  "dependencies": {
+    "@types/chrome": "0.0.91",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neotok/ogamemarketgui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neotok/ogamemarketgui/issues"
+  },
+  "homepage": "https://github.com/neotok/ogamemarketgui#readme"
+}
